@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<title>Cancelamento de notas serie D</title>
+</h:head>
+<h:body>
+	<h:form>
+		<h:panelGrid columns="2">
+			<h:outputLabel value="Nota" />
+			<h:panelGroup>
+				<h:inputText value="#{bNota.nota.numero}" />
+				<h:inputText value="#{bNota.nota.serie}" />
+				<h:inputText value="#{bNota.nota.empresa}" />
+				<h:inputText value="#{bNota.nota.mesMov}" />
+				<h:commandButton value="Consultar"
+					action="#{bNota.actionSelectByNumNotaEmpSerie}" />
+			</h:panelGroup>
+			<h:outputLabel value="Numero: " />
+			<h:inputText value="#{bNota.nota.numero}" />
+			<h:outputLabel value="Serie: " />
+			<h:inputText value="#{bNota.nota.serie}" />
+			<h:outputLabel value="Empresa: " />
+			<h:inputText value="#{bNota.nota.empresa}" />
+			<h:outputLabel value="Data de Movimento: " />
+			<h:inputText value="#{bNota.nota.mesMov}" />
+		</h:panelGrid>
+		
+	</h:form>
+</h:body>
+
+</html>
